@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Use FiraCode Nerd Font
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Change font to FiraCode Nerd Font without breaking icons
 // @author       Xerovoxx98
 // @match        https://shadowcore.loader.au*
@@ -14,13 +14,12 @@ GM_addStyle(`
 
     /* Apply FiraCode Nerd Font only to text elements */
     body, 
-    .some-text-class, 
-    .another-text-class {
+    *:not([class*="icon"]) {
         font-family: "Fira Code", "FiraCode Nerd Font", monospace !important;
     }
 
-    /* Preserve Proxmox icons by not affecting icon-related classes */
-    .fa, .icon-class {
+    /* Preserve all icon classes containing 'icon' in their name */
+    [class*="icon"] {
         font-family: "Font Awesome 5 Free", "Proxmox Icon Font", sans-serif !important;
     }
 `);
