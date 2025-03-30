@@ -13,22 +13,16 @@
 
     GM_addStyle(`
         @import url('https://cdn.jsdelivr.net/npm/nerd-fonts/css/FiraCode.css');
-        /* Proxmox icons will use the default font */
 
-        /* Apply FiraCode Nerd Font with Proxmox icon fallback */
-        body, html, * {
-            font-family: 'Fira Code Nerd Font', monospace, sans-serif !important;
-        }
-
-        /* Specifically target code elements */
-        code, pre, kbd, samp {
+        /* Add your classes here, separated by commas */
+        .fira-code-class, code, pre, kbd, samp {
             font-family: 'Fira Code Nerd Font', monospace !important;
         }
 
-        /* Proxmox icons will fall back to the website's default font. No specific font needs to be defined here. */
+        /* Example of targeting specific elements */
         /*
-        .proxmox-icon-class, .another-proxmox-icon-class {
-            font-family: inherit;
+        .some-other-class {
+            font-family: 'Fira Code Nerd Font', monospace !important;
         }
         */
 
