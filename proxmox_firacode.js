@@ -13,11 +13,11 @@
 
     GM_addStyle(`
         @import url('https://cdn.jsdelivr.net/npm/nerd-fonts/css/FiraCode.css');
-        @import url('https://cdn.jsdelivr.net/npm/nerd-fonts/css/font-awesome.css'); /* For icons */
+        /* Proxmox icons will use the default font */
 
-        /* Apply FiraCode Nerd Font with Font Awesome as fallback for icons */
+        /* Apply FiraCode Nerd Font with Proxmox icon fallback */
         body, html, * {
-            font-family: 'Fira Code Nerd Font', 'Font Awesome 6 Free', monospace, sans-serif !important;
+            font-family: 'Fira Code Nerd Font', monospace, sans-serif !important;
         }
 
         /* Specifically target code elements */
@@ -25,10 +25,10 @@
             font-family: 'Fira Code Nerd Font', monospace !important;
         }
 
-        /* Specifically target icon elements, if possible */
+        /* Proxmox icons will fall back to the website's default font. No specific font needs to be defined here. */
         /*
-        i[class^="fa"], i[class*=" fa"] {
-            font-family: 'Font Awesome 6 Free', sans-serif !important;
+        .proxmox-icon-class, .another-proxmox-icon-class {
+            font-family: inherit;
         }
         */
 
