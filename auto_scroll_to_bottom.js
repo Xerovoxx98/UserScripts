@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto Scroll to Bottom
 // @namespace    http://tampermonkey.net/
-// @version      25.03.002
+// @version      0.2
 // @description  Keep specified tabs scrolled to the bottom
 // @author       Xerovoxx98
 // @match        https://cronicle.loader.au/console?id=*
