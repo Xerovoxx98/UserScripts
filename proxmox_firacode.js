@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Primary Font as Fira Code with Icon Fallbacks
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @description  Set FiraCode as the primary font for Proxmox, with fallbacks to icons and defaults
 // @author       Xerovoxx98
 // @match        https://shadowcore.loader.au*
