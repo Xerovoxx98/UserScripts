@@ -1,47 +1,43 @@
 // ==UserScript==
 // @name         Fix FiraCode Nerd Font with Proxmox Icons
 // @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Ensure FiraCode Nerd Font works without breaking icons on Proxmox
+// @version      1.1
+// @description  Apply FiraCode Nerd Font while preserving Proxmox framework icons
 // @author       Xerovoxx98
 // @match        https://shadowcore.loader.au*
 // @grant        GM_addStyle
 // ==/UserScript==
 
 GM_addStyle(`
-  /* Import FiraCode Nerd Font AND required icon fonts */
+  /* Import FiraCode Nerd Font and Proxmox icon fonts if missing */
   @import url('https://cdn.jsdelivr.net/npm/nerd-fonts/css/font-awesome.css');
 
-  /* General font application */
-  body *:not([class*="fa"]):not([class*="icon"]):not(i):not(span.fa):not([class*="x-mask"]):not([class*="x-border-box"]) {
+  /* Apply font to most text elements, excluding framework visuals/icons */
+  body *:not([class*="fa"])
+         :not([class*="icon"])
+         :not([class*="x-mask"])
+         :not([class*="x-border-box"])
+         :not([class*="x-tool"])
+         :not([class*="-draggable"]) {
       font-family: "Fira Code", "FiraCode Nerd Font", monospace !important;
   }
 
-  /* Prevent font-family override on Proxmox framework elements */
+  /* Prevent inheritance for framework visuals/icons */
   .x-mask,
   .x-border-box,
   .x-tool,
   .x-window-header-default,
-  .x-header-draggable,
-  div[class*="x-mask"],
-  div[class*="x-border-box"],
-  div[class*="x-tool"] {
+  .x-header-draggable {
       font-family: 'helvetica', 'arial', 'verdana', sans-serif !important;
   }
 
-  /* Restore pseudo-element fonts */
+  /* Reinforce pseudo-element defaults for framework visuals/icons */
   .x-mask::before,
   .x-mask::after,
   .x-border-box::before,
-  .x-border-box::after {
+  .x-border-box::after,
+  .x-tool::before,
+  .x-tool::after {
       font-family: 'FontAwesome', 'helvetica', 'arial' !important;
-  }
-
-  /* Handle specific ExtJS elements and pseudo-elements if they use icons */
-  span.x-tool,
-  span.x-window-header-default,
-  span.x-tool::before,
-  span.x-tool::after {
-      font-family: 'FontAwesome', 'helvetica', 'arial', sans-serif !important;
   }
 `);
