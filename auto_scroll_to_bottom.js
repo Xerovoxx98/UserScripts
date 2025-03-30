@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Keep specified tabs scrolled to the bottom
 // @author       Xerovoxx98
-// @match        ^https:\/\/cronicle\.loader\.au\/console\?id=.*$
+// @match        https://cronicle.loader.au/console?id=*
 // @grant        none
 // ==/UserScript==
 
