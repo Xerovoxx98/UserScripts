@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Primary Font as Fira Code with Icon Fallbacks
 // @namespace    http://tampermonkey.net/
-// @version      1.7
-// @description  Set FiraCode as the primary font for Proxmox, with fallbacks to icons and defaults
+// @version      2.0
+// @description  Changes Proxmox fonts to FiraCode Nerd Font
 // @author       Xerovoxx98
 // @match        https://shadowcore.loader.au*
 // @grant        GM_addStyle
@@ -15,16 +15,8 @@
         @import url('https://cdn.jsdelivr.net/npm/nerd-fonts/css/FiraCode.css');
 
         /* Add your classes here, separated by commas */
-        .x-body {
+        .x-body, .x-tree-node-text, .x-grid-item, .x-btn-inner-default-toolbar-small, .x-btn-inner-default-small, .x-column-header, .x-menu-item-text-default, .x-form-text-default, .x-boundlist-item, .x-tab-inner-default {
             font-family: 'Fira Code Nerd Font', monospace !important;
         }
-
-        /* Example of targeting specific elements */
-        /*
-        .some-other-class {
-            font-family: 'Fira Code Nerd Font', monospace !important;
-        }
-        */
-
     `);
 })();
