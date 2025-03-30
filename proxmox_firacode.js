@@ -4,7 +4,7 @@
 // @version      2.1
 // @description  Changes Proxmox fonts to FiraCode Nerd Font
 // @author       Xerovoxx98
-// @match        https://shadowcore.loader.au*
+// @match        https://proxmox.mydomain.com*
 // @grant        GM_addStyle
 // ==/UserScript==
 
