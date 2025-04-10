@@ -7,13 +7,22 @@
 // @match        https://www.getmerlin.in/chat*
 // @grant        none
 // ==/UserScript==
-
 (function() {
-    'use strict';
-    GM_addStyle(`
-          .relative.mx-auto.grid.w-full.content-start {
-            border: 2px solid red;
-            max-width: none !important;
-          }
-    `);
+  'use strict';
+
+  // Create a new style element
+  const style = document.createElement('style');
+
+  // Add the CSS rules to the style element
+  style.textContent = `
+    @media (min-width: 768px) {
+      .relative.mx-auto.grid.w-full.content-start {
+        border: 2px solid red;
+        max-width: none !important;
+      }
+    }
+  `;
+
+  // Append the style element to the document head
+  document.head.appendChild(style);
 })();
