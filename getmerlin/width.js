@@ -1,6 +1,7 @@
+// ==UserScript==
 // @name         Expand Chat Response Box
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Expands the width of the chat response box on the Chat - Merlin AI page
 // @author       Xerovoxx98
 // @match        https://www.getmerlin.in/chat*
@@ -9,11 +10,8 @@
 
 (function() {
     'use strict';
-
-    // Create a new style element
     const style = document.createElement('style');
     style.id = 'Xerovoxx98-Styles-css'; 
-
     style.textContent = `
         /* Expand the maximum width of the chat container */
         .relative.mx-auto.grid.w-full.content-start {
@@ -42,7 +40,6 @@
                         box-shadow 0.5s ease-in-out !important;
         }
     `;
-
     document.head.appendChild(style);
     console.log('Expanded chat response box userscript loaded.');
     if (!document.getElementById('Xerovoxx98-Styles-css')) {
