@@ -13,13 +13,10 @@
     
     GM_addStyle(`
         @media (min-width: 768px) {
-            .\\!container,
-            .container {
-                max-width: 100% !important;
-                width: 100% !important;
-                padding-right: 60px !important;
-                padding-left: 60px !important;
-            }
+          .relative.mx-auto.grid.w-full.content-start {
+            border: 2px solid red;
+            max-width: none !important;
+          }
         }
     `);
 })();
