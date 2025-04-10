@@ -10,13 +10,10 @@
 
 (function() {
     'use strict';
-    
     GM_addStyle(`
-        @media (min-width: 768px) {
           .relative.mx-auto.grid.w-full.content-start {
             border: 2px solid red;
             max-width: none !important;
           }
-        }
     `);
 })();
