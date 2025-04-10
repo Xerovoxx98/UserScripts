@@ -10,10 +10,8 @@
 (function() {
   'use strict';
 
-  // Create a new style element
   const style = document.createElement('style');
 
-  // Add the CSS rules to the style element
   style.textContent = `
     @media (min-width: 768px) {
       .relative.mx-auto.grid.w-full.content-start {
@@ -23,6 +21,5 @@
     }
   `;
 
-  // Append the style element to the document head
   document.head.appendChild(style);
 })();
