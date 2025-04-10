@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Expand Chat Response Box
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  Expands the width of the chat response box on the Chat - Merlin AI page
 // @author       Xerovoxx98
 // @match        https://www.getmerlin.in/chat*
